@@ -66,7 +66,7 @@ def plot_single_pr_curve(y_true, y_proba, fig_folder, model_name):
     plt.legend(loc="lower left") 
     plt.grid(True, alpha=0.3) 
     plt.tight_layout() 
-    plt.savefig(f"{fig_folder}/precision_recall_curve.png", dpi=600, bbox_inches='tight') 
+    plt.savefig(f"{fig_folder}/precision_recall_curve.svg", dpi=600, bbox_inches='tight') 
     plt.close()
 
 def plot_probability_distribution(y_true, y_proba, fig_folder):
@@ -88,7 +88,7 @@ def plot_probability_distribution(y_true, y_proba, fig_folder):
     plt.grid(axis='y', alpha=0.3)
     plt.xlim([0, 1])
     plt.tight_layout()
-    plt.savefig(f"{fig_folder}/probability_distribution.png", dpi=600, bbox_inches='tight')
+    plt.savefig(f"{fig_folder}/probability_distribution.svg", dpi=600, bbox_inches='tight')
     plt.close()
 
 def plot_calibration_curve(y_true, y_proba, fig_folder, n_bins=10):
@@ -110,7 +110,7 @@ def plot_calibration_curve(y_true, y_proba, fig_folder, n_bins=10):
     plt.xlim([0, 1])
     plt.ylim([0, 1])
     plt.tight_layout()
-    plt.savefig(f"{fig_folder}/calibration_curve.png", dpi=600, bbox_inches='tight')
+    plt.savefig(f"{fig_folder}/calibration_curve.svg", dpi=600, bbox_inches='tight')
     plt.close()
 
 def plot_confusion_matrix(y, y_pred, name): 
@@ -123,7 +123,7 @@ def plot_confusion_matrix(y, y_pred, name):
     plt.ylabel('Actual') 
     plt.xlabel('Predicted') 
     plt.tight_layout() 
-    plt.savefig(f"../Figures/Model_Analysis/{name}.png", dpi=600, bbox_inches='tight')
+    plt.savefig(f"../Figures/Model_Analysis/{name}.svg", dpi=600, bbox_inches='tight')
     plt.close()
 
 def plot_single_roc_curve(y_true, y_proba, fig_folder, model_name):
@@ -140,7 +140,7 @@ def plot_single_roc_curve(y_true, y_proba, fig_folder, model_name):
     plt.legend(loc="lower right") 
     plt.grid(True, alpha=0.3) 
     plt.tight_layout() 
-    plt.savefig(f"{fig_folder}/roc_curve.png", dpi=600, bbox_inches='tight') 
+    plt.savefig(f"{fig_folder}/roc_curve.svg", dpi=600, bbox_inches='tight') 
     plt.close()
 
 def plot_single_pr_curve(y_true, y_proba, fig_folder, model_name): 
@@ -158,10 +158,10 @@ def plot_single_pr_curve(y_true, y_proba, fig_folder, model_name):
     plt.legend(loc="lower left") 
     plt.grid(True, alpha=0.3) 
     plt.tight_layout() 
-    plt.savefig(f"{fig_folder}/precision_recall_curve.png", dpi=600, bbox_inches='tight') 
+    plt.savefig(f"{fig_folder}/precision_recall_curve.svg", dpi=600, bbox_inches='tight') 
     plt.close()
 
-def optimize_f1_threshold_cv(y_true, y_proba, threshold_range=(0.45, 0.55), step=0.02): 
+def optimize_f1_threshold_cv(y_true, y_proba, threshold_range=(0.46, 0.56), step=0.02): 
     thresholds = np.arange(threshold_range[0], threshold_range[1] + step, step) 
     results = [] 
 
@@ -311,7 +311,7 @@ def train_model(df, bits_to_keep):
     #captum feature analysis 
     captum_analysis(X, y, final_model, bits_to_keep)
     
-    optimal_threshold = optimize_f1_threshold_cv(y, y_proba) 
+    optimal_threshold = optimize_f1_threshold_cv(y, y_proba)
     y_pred_optimal = (y_proba >= optimal_threshold).astype(int) 
     
     plot_confusion_matrix(y, y_pred_optimal, "Threshold_Optimized_Confusion_Matrix") 

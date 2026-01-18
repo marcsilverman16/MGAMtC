@@ -19,6 +19,7 @@ from sklearn.metrics import f1_score, precision_score, recall_score, confusion_m
 from sklearn.model_selection import cross_val_predict
 from captum.attr import FeaturePermutation
 import torch
+import joblib
 
 
 RDLogger.DisableLog('rdApp.*') #disable all RDKit warnings
@@ -26,6 +27,7 @@ RDLogger.DisableLog('rdApp.*') #disable all RDKit warnings
 os.makedirs("../data/Results/", exist_ok=True)
 os.makedirs("../Figures", exist_ok=True)
 os.makedirs("../data/Insights/", exist_ok=True)
+os.makedirs("../data/Model_Pickle/", exist_ok=True)
 # os.makedirs("../Figures/Model_Analysis", exist_ok=True)
 
 class SklearnWrapper(torch.nn.Module):
@@ -49,7 +51,125 @@ def captum_analysis(X, y, final_model, bits_to_keep):
     attributions_df['label'] = y
 
     os.makedirs("../data/Results/Insights", exist_ok=True)
-    attributions_df.to_excel('../data/Insights/feature_attributions_all.xlsx', index=False)
+    os.makedirs("../Figures/Model_Analysis", exist_ok=True)
+    attributions_df.to_excel('../data/Results/Insights/feature_attributions_all.xlsx', index=False)
+    
+    # Calculate mean absolute attributions per feature
+    mean_attributions = np.abs(attributions_np).mean(axis=0)
+    sorted_indices = np.argsort(mean_attributions)[::-1]
+    top_n = min(20, len(column_labels))
+    
+    # 1. Bar plot of mean absolute feature importance
+    fig1, ax1 = plt.subplots(figsize=(10, 12))  # Increased height for more spacing
+    
+    ax1.barh(range(top_n), mean_attributions[sorted_indices[:top_n]], color='steelblue')
+    ax1.set_yticks(range(top_n))
+    ax1.set_yticklabels([column_labels[i] for i in sorted_indices[:top_n]], fontsize=10)
+    ax1.set_xlabel('Mean Absolute Attribution', fontsize=12)
+    ax1.set_ylabel('Feature', fontsize=12)
+    ax1.set_title(f'Top {top_n} Most Important Features', fontsize=14, fontweight='bold', pad=20)
+    ax1.invert_yaxis()
+    ax1.grid(axis='x', alpha=0.3)
+    
+    # Add more spacing between y-axis ticks
+    ax1.set_ylim(-0.5, top_n - 0.5)
+    
+    plt.tight_layout()
+    plt.savefig('../Figures/Model_Analysis/top_features_importance.svg', 
+                dpi=300, bbox_inches='tight')
+    plt.close()
+    
+    # 2. Heatmap of attributions by class
+    fig2, ax2 = plt.subplots(figsize=(14, 5))
+    class_0_mean = attributions_np[y == 0].mean(axis=0)
+    class_1_mean = attributions_np[y == 1].mean(axis=0)
+    
+    heatmap_data = np.vstack([class_0_mean[sorted_indices[:top_n]], 
+                               class_1_mean[sorted_indices[:top_n]]])
+    
+    sns.heatmap(heatmap_data, 
+                xticklabels=[column_labels[i] for i in sorted_indices[:top_n]],
+                yticklabels=['Negative', 'Positive'],
+                cmap='RdBu_r', center=0, annot=False, 
+                cbar_kws={'label': 'Mean Attribution'},
+                ax=ax2)
+    ax2.set_title('Mean Feature Attribution by Class', fontsize=14, fontweight='bold', pad=20)
+    ax2.set_xlabel('Feature', fontsize=12)
+    ax2.set_ylabel('Class', fontsize=12)
+    plt.setp(ax2.get_xticklabels(), rotation=45, ha='right', fontsize=9)
+    plt.setp(ax2.get_yticklabels(), fontsize=11)
+    
+    plt.tight_layout()
+    plt.savefig('../Figures/Model_Analysis/attribution_heatmap_by_class.svg', 
+                dpi=300, bbox_inches='tight')
+    plt.close()
+    
+    # 3. Distribution of attributions (violin plot for top features)
+    fig3, ax3 = plt.subplots(figsize=(12, 7))
+    top_features = 10
+    violin_data = [attributions_np[:, i] for i in sorted_indices[:top_features]]
+    positions = range(1, top_features + 1)
+    
+    parts = ax3.violinplot(violin_data, positions=positions, widths=0.7, 
+                           showmeans=True, showmedians=True)
+    ax3.set_xticks(positions)
+    ax3.set_xticklabels([column_labels[i] for i in sorted_indices[:top_features]], 
+                        rotation=45, ha='right', fontsize=10)
+    ax3.set_ylabel('Attribution Value', fontsize=12)
+    ax3.set_xlabel('Feature', fontsize=12)
+    ax3.set_title(f'Distribution of Top {top_features} Feature Attributions', 
+                  fontsize=14, fontweight='bold', pad=20)
+    ax3.grid(axis='y', alpha=0.3)
+    ax3.axhline(y=0, color='red', linestyle='--', linewidth=1, alpha=0.5)
+    
+    plt.tight_layout()
+    plt.savefig('../Figures/Model_Analysis/attribution_distribution.svg', 
+                dpi=300, bbox_inches='tight')
+    plt.close()
+    
+    # 4. Cumulative importance plot
+    fig4, ax4 = plt.subplots(figsize=(10, 7))
+    cumulative_importance = np.cumsum(mean_attributions[sorted_indices]) / np.sum(mean_attributions)
+    
+    ax4.plot(range(1, len(cumulative_importance) + 1), cumulative_importance, 
+             linewidth=2.5, color='darkgreen')
+    ax4.fill_between(range(1, len(cumulative_importance) + 1), cumulative_importance, 
+                     alpha=0.3, color='lightgreen')
+    ax4.axhline(y=0.8, color='red', linestyle='--', linewidth=1.5, 
+                label='80% Threshold', alpha=0.7)
+    ax4.axhline(y=0.9, color='orange', linestyle='--', linewidth=1.5, 
+                label='90% Threshold', alpha=0.7)
+    ax4.set_xlabel('Number of Features', fontsize=12)
+    ax4.set_ylabel('Cumulative Importance', fontsize=12)
+    ax4.set_title('Cumulative Feature Importance', fontsize=14, fontweight='bold', pad=20)
+    ax4.grid(alpha=0.3)
+    ax4.legend(fontsize=11)
+    ax4.set_xlim(1, len(cumulative_importance))
+    ax4.set_ylim(0, 1)
+    
+    plt.tight_layout()
+    plt.savefig('../Figures/Model_Analysis/cumulative_importance.svg', 
+                dpi=300, bbox_inches='tight')
+    plt.close()
+    
+    # Print summary statistics
+    print(f"\n{'='*60}")
+    print("Feature Attribution Analysis Summary")
+    print(f"{'='*60}")
+    print(f"Total features analyzed: {len(column_labels)}")
+    print(f"Top 5 most important features:")
+    for i, idx in enumerate(sorted_indices[:5], 1):
+        print(f"  {i}. {column_labels[idx]}: {mean_attributions[idx]:.4f}")
+    
+    # Find how many features account for 80% importance
+    threshold_80 = np.where(cumulative_importance >= 0.8)[0][0] + 1
+    threshold_90 = np.where(cumulative_importance >= 0.9)[0][0] + 1
+    print(f"\nFeatures needed for 80% importance: {threshold_80}")
+    print(f"Features needed for 90% importance: {threshold_90}")
+    print(f"{'='*60}\n")
+    print(f"Figures saved to: ../Figures/Model_Analysis/")
+    
+    return attributions_df
 
 def plot_single_pr_curve(y_true, y_proba, fig_folder, model_name): 
     precision, recall, _ = precision_recall_curve(y_true, y_proba) 
@@ -306,13 +426,27 @@ def train_model(df, bits_to_keep):
     seed_3 = random.randint(0, 10000) 
     print("\nRandom seed for final model training:", seed_3) 
     final_model = RandomForestClassifier(**best_params, random_state=seed_3) 
-    final_model.fit(X, y) 
+    final_model.fit(X, y)
+
+    model_artifacts = {
+        'model': final_model,
+        'X_train': X,
+        'y_train': y,
+        'bits_to_keep': bits_to_keep,
+        'optimal_threshold': None,  # Will be updated below
+        'feature_names': [f'bit_{bit_idx}' for bit_idx in bits_to_keep],
+        'best_params': best_params,
+        'seeds': [seed_1, seed_2, seed_3]
+    }
     
     #captum feature analysis 
     captum_analysis(X, y, final_model, bits_to_keep)
     
     optimal_threshold = optimize_f1_threshold_cv(y, y_proba)
-    y_pred_optimal = (y_proba >= optimal_threshold).astype(int) 
+    y_pred_optimal = (y_proba >= optimal_threshold).astype(int)
+
+    joblib.dump(model_artifacts, "../data/Model_Pickle/model_artifacts.pkl")
+    print("\nModel artifacts saved to: ../data/Model_Pickle/model_artifacts.pkl")
     
     plot_confusion_matrix(y, y_pred_optimal, "Threshold_Optimized_Confusion_Matrix") 
     
@@ -334,20 +468,19 @@ def train_model(df, bits_to_keep):
     return final_model, performance_metrics, predictions_df, optimal_threshold
 
 def predict_new_data(model, new_data_df, bits_to_keep, optimal_threshold): 
-    df_filtered = new_data_df.copy() 
-    
+
     def filter_fingerprint(fp): 
-        return fp[bits_to_keep].astype(int) 
+        return fp[bits_to_keep].astype(int).tolist()
     
-    df_filtered["Filtered_Fingerprint"] = new_data_df["Fingerprint"].apply(filter_fingerprint) 
+    filtered_fps = new_data_df["Fingerprint"].apply(filter_fingerprint) 
     
-    X = df_filtered["Filtered_Fingerprint"] 
-    X = np.vstack(X) 
+    X = np.vstack(filtered_fps) 
     
     probabilities = model.predict_proba(X)[:, 1] 
     predictions = (probabilities >= optimal_threshold).astype(int) 
     
     results_df = new_data_df.copy() 
+    results_df['Filtered_Fingerprint'] = filtered_fps
     results_df['Probability'] = probabilities 
     results_df['Prediction'] = predictions 
     

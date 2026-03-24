@@ -1,0 +1,184 @@
+Chemical Name,SMILES,Binding
+1-amino-1-deoxy-beta-D-mannopyranose,C([C@@H]1[C@H]([C@@H]([C@@H](C(O1)N)O)O)O)O,Yes
+Beta-D-glucopyranosyl amine,NC(O1)[C@H](O)[C@@H](O)[C@H](O)[C@H]1CO,Yes
+Miglitol,C1[C@@H]([C@H]([C@@H]([C@H](N1CCO)CO)O)O)O,Yes
+1-Deoxynojirimycin,C1[C@@H]([C@H]([C@@H]([C@H](N1)CO)O)O)O,Yes
+D-(+)-Turanose,O1[C@@H]([C@@H]([C@H]([C@@H]([C@H]1CO)O)O)O)O[C@H]2[C@@H]([C@@H](COC2(O)CO)O)O,Yes
+Voglibose,C1[C@@H]([C@@H]([C@H]([C@@H]([C@]1(CO)O)O)O)O)NC(CO)CO,Yes
+1-Deoxy-1-morpholino-D-fructose,O[C@H](COC(CN1CCOCC1)2O)[C@H]([C@@H]2O)O,Yes
+D-Glucamine,C([C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O)N,Yes
+Acarbose,C[C@@H]1[C@H]([C@@H]([C@H]([C@H](O1)O[C@@H]2[C@H](O[C@@H]([C@@H]([C@H]2O)O)O[C@H]([C@@H](CO)O)[C@@H]([C@H](C=O)O)O)CO)O)O)N[C@H]3C=C([C@H]([C@@H]([C@H]3O)O)O)CO,Yes
+Meglumine,N(C[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO)C,Yes
+2-Deoxy-D-glucose,C1[C@H]([C@@H]([C@H](OC1O)CO)O)O,No
+1-Thio-beta-D-glucose sodium salt,C([C@@H]1[C@H]([C@@H]([C@H](C(O1)[S-])O)O)O)O.[Na+],Yes
+5-Thio-D-glucose,OC[C@@H]1[C@@H](O)[C@H](O)[C@@H](O)C(O)S1,No
+D-(-)-Tagatose,C1[C@H]([C@@H]([C@@H](C(O1)(CO)O)O)O)O,No
+D-(+)-Sorbose,C1[C@H]([C@@H]([C@H](C(O1)(CO)O)O)O)O,No
+D-Psicose,C1[C@H]([C@H]([C@H](C(O1)(CO)O)O)O)O,No
+"2-hydroxymethyl-tetrahydro-pyran-3,4,5-triol",O1C(C(C(C(C1)O)O)O)CO,No
+alpha-D-glucopyranosyl fluoride,FC(O1)[C@H](O)[C@@H](O)[C@H](O)[C@H]1CO,No
+"1-Amino-2,5-anhydro-1-deoxy-D-mannitol",OC[C@@H]1[C@@H](O)[C@H](O)C(CN)O1,No
+D-(+)-Cellobiose,O[C@@H]1[C@@H](O)C(O)O[C@H](CO)[C@H]1O[C@H](O2)[C@H](O)[C@@H](O)[C@H](O)[C@H]2CO,No
+Maltose,C([C@@H]1[C@H]([C@@H]([C@H]([C@H](O1)O[C@@H]2[C@H](OC([C@@H]([C@H]2O)O)O)CO)O)O)O)O,Yes
+beta-Lactose,O1[C@H]([C@@H]([C@H]([C@H]([C@H]1CO)O)O)O)O[C@@H]2[C@H](O[C@H]([C@@H]([C@H]2O)O)O)CO,No
+D-Sorbitol,O[C@@H]([C@H](O)[C@H](O)CO)[C@@H](O)CO,No
+Dulcitol,O[C@H]([C@H](O)[C@@H](O)CO)[C@H](O)CO,No
+L-Iditol,O[C@@H]([C@H](O)[C@@H](O)CO)[C@@H](O)CO,No
+D-Mannitol,O[C@@H]([C@H](O)[C@H](O)CO)[C@H](O)CO,No
+"2,5-Anhydro-D-mannitol",C([C@@H]1[C@H]([C@@H]([C@H](O1)CO)O)O)O,No
+"2,5-Anhydro-D-glucitol",C([C@@H]1[C@H]([C@@H]([C@@H](O1)CO)O)O)O,No
+1-Azido-1-deoxy-beta-D-glucopyranoside,[N-]=[N+]=NC(O1)[C@H](O)[C@@H](O)[C@H](O)[C@H]1CO,No
+Ethyl-beta-D-thiogalactopyranoside,CCSC1[C@@H]([C@H]([C@H]([C@H](O1)CO)O)O)O,No
+Methyl-beta-D-thiogalactoside,O[C@@H]1[C@@H](O)[C@@H](O)[C@@H](CO)OC1SC,No
+2-Azidoethyl beta-lactopyranoside,[N+](=[N-])=NCCO[C@@H]1OC([C@H](C(C1O)O)O[C@@H]2OC(C([C@@H](C2O)O)O)CO)CO,No
+IPTG,S([C@@H]1O[C@@H]([C@@H]([C@@H]([C@H]1O)O)O)CO)C(C)C,No
+D-Leucrose,C1[C@H]([C@H]([C@@H]([C@](O1)(CO)O)O)O)O[C@@H]2[C@@H]([C@H]([C@@H]([C@H](O2)CO)O)O)O,No
+Adonitol,O[C@H]([C@H](O)CO)[C@@H](O)CO,No
+Xylitol,O[C@H]([C@@H](O)CO)[C@H](O)CO,No
+D-(+)-Arabitol,O[C@@H](C(O)[C@H](O)CO)CO,No
+L-(-)-Arabitol,O[C@H](C(O)[C@@H](O)CO)CO,No
+D-(+)-Trehalose dihydrate,O1[C@@H]([C@@H]([C@H]([C@@H]([C@H]1CO)O)O)O)O[C@H]2O[C@@H]([C@H]([C@@H]([C@H]2O)O)O)CO.O.O,No
+2-alpha-Mannobiose,O1[C@@H]([C@H]([C@H]([C@@H]([C@H]1CO)O)O)O)O[C@H]2[C@H]([C@@H]([C@H](OC2O)CO)O)O,No
+n-Heptyl beta-D-thioglucopyranoside,O[C@@H]1[C@@H](O)[C@H](O)[C@@H](CO)OC1SCCCCCCC,No
+Maltitol,O1[C@@H]([C@@H]([C@H]([C@@H]([C@H]1CO)O)O)O)O[C@@H]([C@H](O)[C@@H](O)CO)[C@H](O)CO,No
+1-O-Methyl-2-deoxy-D-ribose,COC1C[C@@H]([C@H](O1)CO)O,No
+meso-Erythritol,O[C@H]([C@H](O)CO)CO,No
+Nigerose,O1[C@@H]([C@@H]([C@H]([C@@H]([C@H]1CO)O)O)O)O[C@H]2[C@@H]([C@H](OC([C@@H]2O)O)CO)O,No
+alpha-Lactose monohydrate,O1[C@H]([C@@H]([C@H]([C@H]([C@H]1CO)O)O)O)O[C@@H]2[C@H](O[C@@H]([C@@H]([C@H]2O)O)O)CO.O,No
+D-Lactitol monohydrate,O1[C@H]([C@@H]([C@H]([C@H]([C@H]1CO)O)O)O)O[C@@H]([C@H](O)[C@@H](O)CO)[C@H](O)CO.O,No
+Methyl-beta-D-galactopyranoside,OC[C@@H]1[C@H](O)[C@H](O)[C@@H](O)C(OC)O1,No
+Methyl alpha-D-mannopyranoside,OC[C@@H]1[C@@H](O)[C@H](O)[C@H](O)C(OC)O1,No
+Methyl alpha-D-galactopyranoside,OC[C@@H]1[C@H](O)[C@H](O)[C@@H](O)C(OC)O1,No
+Methyl-beta-D-glucopyranoside hemihydrate,OC[C@@H]1[C@@H](O)[C@H](O)[C@@H](O)C(OC)O1,No
+Aucubin,O1[C@H]([C@@H]([C@H]([C@@H]([C@H]1CO)O)O)O)O[C@@H]2OC=C[C@@H]3[C@H]2C(=C[C@H]3O)CO,No
+Chloralose,ClC(Cl)(Cl)[C@H]1O[C@H]2O[C@@H]([C@@H]([C@H]2O1)O)[C@H](O)CO,No
+1-Amino-1-deoxy-D-Fructose hydrochloride,C([C@@H]1[C@H]([C@@H](C(O1)(CN)O)O)O)O,No
+"1,2-O-Isopropylidene-alpha-D-xylofuranose",CC1(O[C@@H]2[C@H]([C@H](O[C@@H]2O1)CO)O)C,No
+D-Mannosamine hydrochloride,Cl.N[C@H]1[C@H]([C@@H]([C@H](OC1O)CO)O)O,No
+D-(+)-Glucosamine hydrochloride,Cl.N[C@@H]1[C@H]([C@@H]([C@H](OC1O)CO)O)O,No
+D-(+)-Galactosamine hydrochloride,C([C@@H]1[C@@H]([C@@H]([C@H](C(O1)O)N)O)O)O,No
+Glycerol,OC(CO)CO,No
+D-Mannoheptulose,OCC(O1)(O)[C@@H](O)[C@@H](O)[C@H](O)[C@H]1CO,No
+Catalpol,O1[C@H]([C@@H]([C@H]([C@@H]([C@H]1CO)O)O)O)O[C@@H]2OC=C[C@@H]3[C@H]2[C@]4(O[C@H]4[C@H]3O)CO,No
+Sedoheptulose anhydride monohydrate,O1[C@]2(OC[C@@H]1[C@H]([C@H]([C@@H]2O)O)O)CO.O,No
+"D-Xylono-1,4-lactone",O1[C@@H]([C@@H]([C@H](C1=O)O)O)CO,No
+"D-Arabino-1,4-lactone",O1[C@@H]([C@H]([C@@H](C1=O)O)O)CO,No
+Gluconolactone,O1[C@@H]([C@H]([C@@H]([C@H](C1=O)O)O)O)CO,No
+DL-Dithiothreitol,SC[C@@H](O)[C@H](O)CS,No
+"1,4-Dithioerythritol",SC[C@H](O)[C@H](O)CS,No
+L-(-)-Dithiothreitol,SC[C@H](O)[C@@H](O)CS,No
+Lactulose,O1[C@@]([C@H]([C@@H]([C@H]1CO)O[C@@H]2O[C@@H]([C@@H]([C@@H]([C@H]2O)O)O)CO)O)(O)CO,No
+3-O-Methyl-D-glucopyranose,O[C@@H]1[C@H](OC([C@@H]([C@H]1OC)O)O)CO,No
+L-(-)-Glucose,C([C@H]1[C@@H]([C@H]([C@@H](C(O1)O)O)O)O)O,No
+L-(+)-Gulose,O1[C@H]([C@H]([C@@H]([C@@H](C1O)O)O)O)CO,No
+D-(+)-Talose,O1[C@@H]([C@@H]([C@@H]([C@@H](C1O)O)O)O)CO,No
+L-(-)-Mannose,O1[C@H]([C@@H]([C@H]([C@H](C1O)O)O)O)CO,No
+D-Allose,C([C@@H]1[C@H]([C@H]([C@H](C(O1)O)O)O)O)O,No
+L-(-)-Galactose,O1[C@H]([C@H]([C@H]([C@@H](C1O)O)O)O)CO,No
+D-(+)-Galactose,C([C@@H]1[C@@H]([C@@H]([C@H](C(O1)O)O)O)O)O,No
+DL-Xylose,O[C@@H]([C@H](O)CO)[C@@H](O)C=O,No
+"2-Deoxystreptamine, Dihydrobromide",C1[C@H]([C@@H](C([C@@H]([C@H]1N)O)O)O)N,No
+4-Aminophenyl beta-D-galactopyranoside,NC1=CC=C(OC2[C@H](O)[C@@H](O)[C@@H](O)[C@@H](CO)O2)C=C1,No
+Gastrodin,O1[C@H]([C@@H]([C@H]([C@@H]([C@H]1CO)O)O)O)Oc2ccc(cc2)CO,No
+Arbutin,O1[C@H]([C@@H]([C@H]([C@@H]([C@H]1CO)O)O)O)Oc2ccc(cc2)O,No
+Sucrose,O1[C@]([C@H]([C@@H]([C@H]1CO)O)O)(O[C@H]2O[C@@H]([C@H]([C@@H]([C@H]2O)O)O)CO)CO,No
+D-(-)-Ribose,C([C@@H]1[C@H]([C@H](C(O1)O)O)O)O,No
+L-(+)-Ribose,O1[C@H]([C@@H]([C@@H](C1O)O)O)CO,No
+Octyl alpha-D-glucopyranoside,OC[C@@H]1[C@@H](O)[C@H](O)[C@@H](O)C(OCCCCCCCC)O1,No
+Decyl beta-D-glucopyranoside,OC[C@@H]1[C@@H](O)[C@H](O)[C@@H](O)C(OCCCCCCCCCC)O1,No
+n-Dodecyl beta-D-glucopyranoside,OC[C@@H]1[C@@H](O)[C@H](O)[C@@H](O)C(OCCCCCCCCCCCC)O1,No
+Nonyl beta-D-glucopyranoside,OC[C@@H]1[C@@H](O)[C@H](O)[C@@H](O)C(OCCCCCCCCC)O1,No
+1-Thioglycerol,SCC(O)CO,No
+(-)-Sinigrin hydrate,[K+].[S](=O)(=O)([O-])ONC(=CC=C)S[C@@H]1O[C@@H]([C@H]([C@@H]([C@H]1O)O)O)CO.O,No
+Sucralose,Cl[C@H]1[C@H](O[C@@H]([C@@H]([C@H]1O)O)O[C@@]2(O[C@@H]([C@H]([C@@H]2O)O)CCl)CCl)CO,No
+2-Phenylethyl beta-D-thiogalactoside,O[C@@H]1[C@@H](O)[C@@H](O)[C@@H](CO)OC1SCCc2ccccc2,No
+myo-Inositol,O[C@@H]1[C@H]([C@H]([C@H]([C@@H]([C@H]1O)O)O)O)O,No
+cis-Inositol,O[C@@H]1[C@@H]([C@@H]([C@@H]([C@@H]([C@@H]1O)O)O)O)O,No
+epi-Inositol,O[C@@H]1[C@H]([C@H]([C@H]([C@H]([C@H]1O)O)O)O)O,No
+DL-Glyceraldehyde,OC(CO)C=O,No
+D-Glucosamine 3-sulfate,[S](=O)(=O)(O[C@H]1[C@@H]([C@H](OC([C@@H]1N)O)CO)O)O,No
+"L-Galactono-1,4-lactone",O1[C@@H]([C@H]([C@@H](C1=O)O)O)[C@@H](O)CO,No
+L-Ascorbic acid,O1[C@@H](C(C(=O)C1=O)O)[C@@H](O)CO,No
+Melibiose,C([C@@H]1[C@@H]([C@@H]([C@H]([C@H](O1)OC[C@@H]2[C@H]([C@@H]([C@H]([C@H](O2)O)O)O)O)O)O)O)O,No
+Isomaltose,O1[C@@H]([C@@H]([C@H]([C@@H]([C@H]1CO)O)O)O)OC[C@H]2OC([C@@H]([C@H]([C@@H]2O)O)O)O,No
+Palatinose hydrate,O1[C@@H]([C@H]([C@@H](C1(O)CO)O)O)CO[C@H]2O[C@@H]([C@H]([C@@H]([C@H]2O)O)O)CO.O,No
+Methyl beta-D-xylopyranoside,O[C@H]1[C@H](O)[C@@H](O)C(OC)OC1,No
+N-Acetyl-D-lactosamine,N([C@@H]1[C@H]([C@@H]([C@H](OC1O)CO)O[C@@H]2O[C@@H]([C@@H]([C@@H]([C@H]2O)O)O)CO)O)C(=O)C,No
+Ascorbyl Glucoside,C([C@@H]1[C@H]([C@@H]([C@H]([C@H](O1)OC2=C([C@H](OC2=O)[C@H](CO)O)O)O)O)O)O,No
+L-(+)-Threose,O1C([C@H]([C@@H](C1)O)O)O,No
+L(+)-Erythrose,C1[C@@H]([C@@H]([C@@H](O1)O)O)O,No
+"3-deoxy-1,2,5,6-di-O-isopropylidene alpha-D-glucofuranose",CC1(OCC(O1)[C@@H]2C[C@@H]3[C@H](O2)OC(O3)(C)C)C,No
+beta-Estradiol,O[C@@H]1[C@@]2([C@H]([C@H]3[C@H](CC2)c4c(cc(cc4)O)CC3)CC1)C,No
+alpha-D-Galactosamine 1-phosphate,OC[C@H]1OC(OP(O)(O)=O)[C@@H]([C@H]([C@H]1O)O)N,No
+Dithranol,Oc1c2c(cc3c1c(ccc3)O)cccc2O,No
+D-Glucosaminic acid,N[C@H]([C@@H](O)[C@H](O)[C@H](O)CO)C(=O)O,No
+6-Deoxy-D-glucose,C[C@@H]1[C@H]([C@@H]([C@H](C(O1)O)O)O)O,No
+L-Rhamnose monohydrate,O[C@@H]1[C@H]([C@H](C(O[C@H]1C)O)O)O,No
+D-(+)-Fucose,C[C@@H]1[C@@H]([C@@H]([C@H]([C@@H](O1)O)O)O)O,No
+alpha-D-Glucose 1-phosphate disodium salt hydrate,OC[C@@H](OC1OP([O-])([O-])=O)[C@H]([C@@H]([C@H]1O)O)O,No
+L-(+)-Erythrulose,O[C@@H](CO)C(=O)CO,No
+D-Erythronic acid gamma-lactone,O1C[C@H]([C@H](C1=O)O)O,No
+Amygdalin,N#CC(O[C@@H]2O[C@@H]([C@H]([C@@H]([C@H]2O)O)O)CO[C@@H]3O[C@@H]([C@H]([C@@H]([C@H]3O)O)O)CO)c1ccccc1,No
+alpha-D-Galactose 1-phosphate dipotassium salt pentahydrate,O=P([O-])(OC1O[C@@H](CO)[C@@H](O)[C@@H](O)[C@@H]1O)[O-].[K+].[K+].O.O.O.O.O,No
+N-Acetyl-D-galactosamine,N([C@@H]1[C@H]([C@H]([C@H](OC1O)CO)O)O)C(=O)C,No
+N-Acetyl-D-glucosamine,N([C@@H]1[C@H]([C@@H]([C@H](OC1O)CO)O)O)C(=O)C,No
+L-(+)-Arabinose,C1[C@@H]([C@@H]([C@H](C(O1)O)O)O)O,No
+D-Lyxose,C1[C@H]([C@@H]([C@@H](C(O1)O)O)O)O,No
+D-(-)-Arabinose,O1C([C@H]([C@@H]([C@@H](C1)O)O)O)O,No
+D-(+)-Xylose,O1C([C@@H]([C@H]([C@@H](C1)O)O)O)O,No
+Glycerol phosphate calcium salt,[CaH2].[P](=O)(OC(CO)CO)(O)O,No
+Lactobionic acid,O1[C@H]([C@@H]([C@H]([C@H]([C@H]1CO)O)O)O)O[C@@H]([C@H](O)[C@@H](O)C(=O)O)[C@H](O)CO,No
+D-Sorbitol 6-phosphate barium salt,[Ba+2].[P](=O)([O-])([O-])OC[C@@H](O)[C@@H](O)[C@H](O)[C@@H](O)CO,No
+Mannide monooleate,O1[C@@H]([C@@H]([C@H](C1)O)O)[C@H](O)COC(=O)CCCCCCC\C=C/CCCCCCCC,No
+"N-Acetyl-2,3-dehydro-2-deoxyneuraminic acid",N([C@H]1[C@@H](OC(=C[C@@H]1O)C(=O)O)[C@H](O)[C@H](O)CO)C(=O)C,No
+sn-Glycerol 3-phosphate bis(cyclohexylammonium) salt,[P](=O)(OC[C@H](O)CO)(O)O.NC2CCCCC2.NC1CCCCC1,No
+"2,3,5-Tri-O-benzyl-beta-D-arabinofuranose",OC1O[C@H](COCc2ccccc2)[C@@H](OCc3ccccc3)[C@@H]1OCc4ccccc4,No
+Phthaldialdehyde,O=Cc1c(cccc1)C=O,No
+2-Keto-D-gluconic acid hemicalcium salt hydrate,[Ca+2].[O-]C(=O)C(=O)[C@@H](O)[C@H](O)[C@H](O)CO.[O-]C(=O)C(=O)[C@@H](O)[C@H](O)[C@H](O)CO.O,No
+N-Acetylmuramic acid,N([C@H]([C@@H](O[C@H](C)C(=O)O)[C@H](O)[C@H](O)CO)C=O)C(=O)C,No
+D-Xylonic acid lithium salt,O[C@@H]([C@H](O)CO)[C@@H](O)C(=O)O,No
+"3,5-dideoxy-5-(glycoloylamino)-D-glycero-beta-D-galacto-non-2-ulopyranosonic acid",N([C@H]1[C@@H](O[C@](C[C@@H]1O)(O)C(=O)O)[C@H](O)[C@H](O)CO)C(=O)CO,No
+2-Deoxyribose 5-phosphate sodium salt,O[C@@H]1O[C@H](COP(O)(O)=O)[C@@H](O)C1,No
+"2,3-dihydroxypropyl dihydrogen phosphate",[P](=O)(OCC(O)CO)(O)O,No
+2-Deoxy-D-ribonic acid lithium salt,O[C@@H]([C@@H](O)CC(=O)O)CO,No
+N-Acetyl-alpha-D-glucosamine 1-phosphate disodium salt,CC(N[C@@H]1[C@@H](O)[C@H](O)[C@@H](CO)OC1OP(O)(O)=O)=O,No
+beta-Glycerophosphate disodium salt hydrate,[Na+].[Na+].[P](=O)([O-])([O-])OC(CO)CO.O,No
+Biotin,S1[C@H]([C@H]2NC(=O)N[C@H]2C1)CCCCC(=O)O,No
+DL-Glyceric acid hemicalcium salt hydrate,[Ca+2].[O-]C(=O)C(O)CO.[O-]C(=O)C(O)CO.O.O,No
+alpha-D-Mannose pentaacetate,CC(OC[C@@H]1[C@@H](OC(C)=O)[C@H](OC(C)=O)[C@H](OC(C)=O)C(OC(C)=O)O1)=O,No
+Sucrose 6'-monophosphate dipotassium salt,C([C@@H]1[C@H]([C@@H]([C@H]([C@H](O1)O[C@]2([C@H]([C@@H]([C@H](O2)COP(=O)([O-])[O-])O)O)CO)O)O)O)O.[K+].[K+],No
+Sodium thioglycolate,[Na+].SCC(=O)[O-],No
+D-Galacturonic acid sodium salt,[Na+].[O-]C(=O)[C@H]1OC([C@@H]([C@H]([C@H]1O)O)O)O,No
+"D-Fructose 1,6-bisphosphate trisodium salt hydrate",C([C@@H]1[C@H]([C@@H](C(O1)(COP(=O)(O)O)O)O)O)OP(=O)(O)O,No
+Paeoniflorin,O1[C@H]([C@@H]([C@H]([C@@H]([C@H]1CO)O)O)O)O[C@@]32[C@]4(O[C@@H]5O[C@@]([C@@H]([C@@]53COC(=O)c6ccccc6)C2)(C4)O)C,No
+Digalacturonic acid,[C@@H]1([C@H]([C@H](O[C@@H]([C@@H]1O)O[C@@H]2[C@@H]([C@H](C(O[C@@H]2C(=O)O)O)O)O)C(=O)O)O)O,No
+N-Acetylneuraminic acid,N([C@H]1[C@@H](O[C@](C[C@@H]1O)(O)C(=O)O)[C@H](O)[C@H](O)CO)C(=O)C,No
+DL-alpha-Glycerol phosphate magnesium salt hydrate,[Mg+2].[P](=O)([O-])([O-])OCC(O)CO.O,No
+p-Acetamidophenyl beta-D-glucuronide sodium salt,CC(Nc1ccc(OC2[C@@H]([C@H]([C@@H]([C@H](O2)C([O-])=O)O)O)O)cc1)=O.[Na+],No
+Thioglycolic acid solution,SCC(=O)O,No
+D-Glucosamine 6-phosphate,C([C@@H]1[C@H]([C@@H]([C@H](C(O1)O)N)O)O)OP(=O)(O)O,No
+"alpha-D-Glucose 1,6-bisphosphate potassium salt hydrate",[O-]P([O-])(OC[C@@H](OC1OP([O-])([O-])=O)[C@H]([C@@H]([C@H]1O)O)O)=O.[K+].[K+].[K+].[K+],No
+D-Fructose 6-phosphate dipotassium salt,[K+].[K+].[P](=O)([O-])([O-])OC[C@H]1OC([C@H]([C@@H]1O)O)(O)CO,No
+N-Acetyl-D-glucosamine 6-sulfate sodium salt,[Na+].[S](=O)(=O)([O-])OC[C@H]1OC([C@@H]([C@H]([C@@H]1O)O)NC(=O)C)O,No
+"D-Saccharic acid 1,4-lactone monohydrate",O1[C@@H]([C@@H]([C@H](C1=O)O)O)[C@H](O)C(=O)O.O,No
+Sodium gluconate,[Na+].[O-]C(=O)[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO,No
+alpha-D-Glucoheptonic acid sodium salt,[Na+].[O-]C(=O)[C@H](O)[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO,No
+D-Glucuronic acid,O=C(O)[C@@H]1[C@@H](O)[C@H](O)[C@@H](O)C(O)O1,No
+Calcium D-gluconate,[Ca+2].[O-]C(=O)[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO.[O-]C(=O)[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO,No
+Calcium D-gluconate monohydrate,[Ca+2].[O-]C(=O)[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO.[O-]C(=O)[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO.O,No
+Magnesium D-gluconate hydrate,[Mg+2].[O-]C(=O)[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO.[O-]C(=O)[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO.O,No
+2'-Hydroxy-4'-methoxyacetophenone,O(C)c1cc(c(cc1)C(=O)C)O,No
+Sodium L-lactate,[Na+].[O-]C(=O)[C@@H](O)C,No
+D-Arabinonic acid sodium salt,[Na+].[O-]C(=O)[C@@H](O)[C@H](O)[C@H](O)CO,No
+D-Mannose 6-phosphate disodium salt hydrate,[Na+].[Na+].[P](=O)([O-])([O-])OC[C@H]1OC([C@H]([C@H]([C@@H]1O)O)O)O.O,No
+D-Mannose 6-phosphate sodium salt,OC(O1)[C@@H](O)[C@@H](O)[C@H](O)[C@H]1COP(O)([O-])=O.[Na+],No
+D-Arabinose 5-phosphate disodium salt,C([C@@H]1[C@H]([C@@H](C(O1)O)O)O)OP(=O)([O-])[O-].[Na+].[Na+],No
+5-Keto-D-gluconic acid potassium salt,[K+].[O-]C(=O)[C@H](O)[C@@H](O)[C@H](O)C(=O)CO,No
+Sodium salicylate,[Na+].[O-]C(=O)c1c(cccc1)O,No
+D-Glucose 6-phosphate sodium salt,OP(OC[C@@H]1[C@H]([C@@H]([C@H](C(O)O1)O)O)O)([O-])=O,No
+D-(-)-Lactic acid,O[C@H](C)C(=O)O,No
+DL-Lactic acid,OC(C)C(=O)O,No
+D-(-)-3-Phosphoglyceric acid disodium salt,[Na+].[Na+].[P](=O)([O-])(OC[C@@H](O)C(=O)[O-])O,No
+6-Phosphogluconic acid trisodium salt,[Na+].[Na+].[Na+].[P](=O)([O-])([O-])OC[C@@H](O)[C@@H](O)[C@H](O)[C@@H](O)C(=O)[O-],No
+D-Saccharic acid potassium salt,[K+].[O-]C(=O)[C@H](O)[C@H](O)[C@@H](O)[C@H](O)C(=O)O,No
+6-deoxy-l-galactonic acid sodium salt,[Na+].[O-]C(=O)[C@@H](O)[C@H](O)[C@H](O)[C@@H](O)C,No

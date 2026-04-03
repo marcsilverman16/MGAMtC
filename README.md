@@ -8,4 +8,6 @@ To run the ML model, from the **src directory** type the prompt: <br>
 
 If you want to run the script wih your own files, first make sure your data headers match. Then when running the rf_model.py, the first file is the training data, and the second is the file you want to screen.
 
-The jupyter notebooks are interactive, and there are commented out sections where you will need to provide file paths. For drawing the molecules, you must specifiy a bit location you would like highlighted within the scitpt as well.
+The jupyter notebooks are interactive, and there are commented out sections where you will need to provide file paths. For drawing the molecules, you must specifiy a bit location you would like highlighted within the scitpt as well. <br>
+
+**If you would like to repeat our results, use the seeds listed in the data folder**
